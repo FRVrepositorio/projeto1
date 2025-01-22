@@ -4,6 +4,34 @@
     box-sizing: border-box;
 }
 
+
+#voltar-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Azul padrão */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Suaviza as mudanças de cor */
+    cursor: pointer;
+    user-select: none; /* Evita seleção de texto */
+}
+
+/* Efeito hover */
+#voltar-btn:hover {
+    background-color: #0056b3; /* Azul escuro ao passar o mouse */
+}
+
+/* Efeito ao clicar no botão */
+#voltar-btn:active {
+    background-color: #FF5733; /* Cor laranja durante o clique */
+    transition: background-color 0.1s ease; /* Animação mais rápida */
+}
+
+
 .botão{
     align-items: left;
 }
