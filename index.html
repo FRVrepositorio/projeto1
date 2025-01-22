@@ -6,15 +6,7 @@
     <meta name="description" content="empresa_exemplo.">
     <title>FRV TECNO</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Script do EmailJS -->
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-            // Inicializa o EmailJS com a Public Key
-            emailjs.init("taLJOoJplvNABEweg"); // Substitua pela sua Public Key do EmailJS
-        })();
-    </script>
 </head>
 <body>
     <!-- Header -->
@@ -23,27 +15,30 @@
             <h1>FRV TECNO</h1>
             <p>Codificando o futuro dos seus negócios</p>
             
-           <div class="botão"> <button id="dark-mode-toggle" class="btn-dark-mode" style="align-items: left;">
-                <span id="dark-mode-icon">☀️</span>
-            </button><div>
+            <div class="botão">
+                <button id="dark-mode-toggle" class="btn-dark-mode" style="align-items: left;">
+                    <span id="dark-mode-icon">☀️</span>
+                </button>
+            </div>
         </div>
     </header>
-     <!-- Seção de Serviços -->
-     <section class="services">
-        <div  >
-        <h2>Nossos Serviços</h2>
-          <div class="service-list">
-           <div class="service-item">
+
+    <!-- Seção de Serviços -->
+    <section class="services">
+        <div>
+            <h2>Nossos Serviços</h2>
+            <div class="service-list">
+                <div class="service-item">
                     <h3>Análise e Desenvolvimento de Websites</h3>
                     <p class="text-item">Precisando de um site moderno e eficiente para atrair mais clientes? Ou talvez seu banco de dados esteja lento e atrapalhando suas operações? A FRV TECNO oferece soluções personalizadas para impulsionar o crescimento do seu negócio.</p>
                 </div>
                 <div class="service-item">
-                <h3>Gestão de Projetos de Software</h3>
-                    <p class="text-item"> Nosso desenvolvimento ágil garante que suas ideias se tornem realidade mais rapidamente. Crie soluções de software personalizadas que se adaptam às constantes mudanças do mercado.</p>
+                    <h3>Gestão de Projetos de Software</h3>
+                    <p class="text-item">Nosso desenvolvimento ágil garante que suas ideias se tornem realidade mais rapidamente. Crie soluções de software personalizadas que se adaptam às constantes mudanças do mercado.</p>
                 </div>
                 <div class="service-item">
                     <h3>Suporte Especializado</h3>
-                    <p class="text-item">Possuímos uma equipe de suporte qualificada e experiente, pronta para te auxiliar em todas as etapas do uso do nosso software. Com anos de experiência no mercado, nossos especialistas oferecem soluções personalizadas e eficientes para qualquer problema que você possa encontrar. Nosso objetivo é garantir que você tire o máximo proveito do nosso software e tenha uma experiência positiva.</p>
+                    <p class="text-item">Possuímos uma equipe de suporte qualificada e experiente, pronta para te auxiliar em todas as etapas do uso do nosso software.</p>
                 </div>
             </div>
         </div>
@@ -59,12 +54,10 @@
     </section>
    
     <footer class="footer">
-        
-            <p>&copy; 2024 FRV TECNO | Todos os direitos reservados.</p>
-      
+        <p>&copy; 2024 FRV TECNO | Todos os direitos reservados.</p>
     </footer>
 
-    
-  
+    <!-- Carrega o script.js -->
+    <script src="./script.js"></script>
 </body>
 </html>
