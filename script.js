@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Inicializa o EmailJS com a Public Key
+    emailjs.init("4tQgJElwv-uGaPdm6"); // Substitua pela sua Public Key
+
     // Configuração do botão de alternância do modo escuro
     const toggleButton = document.getElementById("dark-mode-toggle");
     const darkModeIcon = document.getElementById("dark-mode-icon");
@@ -50,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Enviar os dados ao EmailJS
             emailjs
-                .send("service_9miijto", "template_n1dmexh", formData)
+                .send("service_vpqmesg", "template_o9ram2g", formData)
                 .then(() => {
                     // Se enviado com sucesso
                     statusMessage.textContent = "Mensagem enviada com sucesso!";
