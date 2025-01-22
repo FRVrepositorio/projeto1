@@ -31,6 +31,28 @@
     transition: background-color 0.1s ease; /* Animação mais rápida */
 }
 
+/* Estilo do botão no modo escuro */
+body.dark-mode #voltar-btn {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    border: 1px solid #fff; /* Borda branca */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efeito hover no modo escuro */
+body.dark-mode #voltar-btn:hover {
+    background-color: #555; /* Fundo levemente mais claro */
+    color: #f4f4f4; /* Texto mais claro */
+    border-color: #f4f4f4; /* Borda mais clara */
+}
+
+/* Efeito ao clicar no botão no modo escuro */
+body.dark-mode #voltar-btn:active {
+    background-color: #222; /* Fundo ainda mais escuro */
+    color: #ddd; /* Texto suavemente claro */
+    border-color: #ddd; /* Borda clara */
+}
+
 
 .botão{
     align-items: left;
