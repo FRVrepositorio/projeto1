@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.botão{
+    align-items: left;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: rgb(0, 162, 255);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.services {
+    padding: 40px 0;
+    background-color: white;
+}
+.text-item{
+    color: rgb(14, 14, 14);
+}
+.services h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-item {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    background-color: #e2e2e2;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+
+.cta {
+    background-color: rgb(0, 162, 255);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.cta h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    background-color: #fff;
+    color: rgb(0, 162, 255);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+
+.cta .btn:hover {
+    background-color: #ddd;
+}
+
+
+.contact-form {
+    background-color: white;
+    padding: 40px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    background-color: rgb(0, 162, 255);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+
+footer {
+    background-color: rgba(128, 128, 128, 0.89);
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+}
+@media (max-width: 768px) {
+    
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+   
+    .service-list {
+        flex-direction: column; 
+        align-items: center;   
+    }
+
+    .service-item {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
+
+    
+    .cta h2 {
+        font-size: 1.5em;
+    }
+
+    .cta p {
+        font-size: 1em;
+    }
+
+    
+    .contact-form input, 
+    .contact-form textarea {
+        width: 95%; 
+    }
+
+    .contact-form button {
+        width: 95%; 
+    }
+}
+
+@media (max-width: 480px) {
+   
+    .service-item {
+        font-size: 14px; 
+    }
+
+   
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+.service-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transform: scale(1); 
+}
+
+.service-item:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.btn-dark-mode {
+    margin-left: 10px;
+    align-items: end;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.9s ease, border-color 0.9s ease;
+}
+
+.btn-dark-mode .dark {
+    justify-content: flex-end; 
+    background-color: #333;
+    border-color: #fff; 
+}
+
+
+#dark-mode-icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #ccc; 
+    color: #fff;
+    transition: transform 0.9s ease, background-color 0.5s ease, color 0.3s ease;
+}
+
+.btn-dark-mode.dark #dark-mode-icon {
+    background-color: #fff; 
+    color: #333;
+    transform: rotate(360deg);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #292929;
+    color: #ffffff;
+}
+
+body.dark-mode .services {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .service-item {
+    background-color: #3d3d3d;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .text-item{
+    color: #c5c5c5;
+}
+
+body.dark-mode .cta {
+    background-color: #292929;
+    color: #ffffff;
+}
+body.dark-mode .container {
+    background-color: #292929;
+    color: #ffffff;
+}
+body.dark-mode #btn{
+    background-color: white;
+    color: rgb(0, 162, 255);
+}
+body.dark-mode #contact-form{
+    background-color: #353535;
+}
+body.dark-mode #div-form{
+    background-color: #353535;
+    border-radius: 12px;
+}
+
+body.dark-mode footer {
+    background-color: #333333de;
+    color: white;
+}
+
+
+.btn-dark-mode {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.9s ease, border-color 0.9s ease;
+}
+
+.btn-dark-mode.dark {
+    justify-content: flex-end; 
+    background-color: #333;
+    border-color: #fff;
+}
+
+
+#dark-mode-icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    transition: transform 0.9s ease, background-color 0.5s ease, color 0.3s ease;
+}
+
+.btn-dark-mode.dark #dark-mode-icon {
+    background-color: #fff;
+    color: #333;
+    transform: rotate(360deg); 
+}
