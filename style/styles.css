@@ -222,7 +222,10 @@ footer {
         font-size: 14px;
         line-height: 1.4;
     }
-
+    .suporte-btn{
+        margin-left: 75%;
+        margin-right: 1%;
+        }
     header h1 {
         font-size: 2em;
     }
@@ -267,7 +270,10 @@ footer {
     .service-item {
         font-size: 14px; 
     }
-
+    .suporte-btn{
+        margin-left: 70%;
+        margin-right: 1%;
+        }
    
     footer p {
         font-size: 0.9em;
