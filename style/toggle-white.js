@@ -1,34 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Inicializa o EmailJS com a Public Key
-
-    // Configuração do botão de alternância do modo escuro
-    const toggleButton = document.getElementById("dark-mode-toggle");
-    const darkModeIcon = document.getElementById("dark-mode-icon");
+    // Configuração do modo escuro para múltiplos botões
+    const toggleButtons = document.querySelectorAll("#dark-mode-toggle");
+    const darkModeIcon = document.querySelectorAll("#dark-mode-icon");
     const body = document.body;
 
-    if (toggleButton && darkModeIcon) {
-        // Verifica se o modo escuro está ativado no localStorage
-        const isDarkMode = localStorage.getItem("dark-mode") === "true";
-        if (isDarkMode) {
-            body.classList.add("dark-mode");
-            toggleButton.classList.add("dark");
-            darkModeIcon.textContent = "🌙"; // Ícone para o modo claro
-        }
-
-        // Alterna o modo escuro ao clicar no botão
-        toggleButton.addEventListener("click", () => {
-            body.classList.toggle("dark-mode");
-            toggleButton.classList.toggle("dark");
-
-            // Atualiza o ícone e salva o estado no localStorage
-            if (body.classList.contains("dark-mode")) {
-                darkModeIcon.textContent = "🌙"; // Ícone para modo claro
-                localStorage.setItem("dark-mode", "true");
-            } else {
-                darkModeIcon.textContent = "☀️"; // Ícone para modo escuro
-                localStorage.setItem("dark-mode", "false");
-            }
-        });
+    // Verifica se o modo escuro está ativado no localStorage
+    const isDarkMode = localStorage.getItem("dark-mode") === "true";
+    if (isDarkMode) {
+        body.classList.add("dark-mode");
+        toggleButtons.forEach((btn) => btn.classList.add("dark"));
+        darkModeIcon.forEach((icon) => (icon.textContent = "🌙"));
     }
 
-  });
+    // Alterna o modo escuro em todos os botões ao clicar
+    toggleButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            toggleButtons.forEach((btn) => btn.classList.toggle("dark"));
+
+            // Atualiza o ícone em todos os botões
+            darkModeIcon.forEach((icon) => {
+                if (body.classList.contains("dark-mode")) {
+                    icon.textContent = "🌙"; // Ícone para modo claro
+                    localStorage.setItem("dark-mode", "true");
+                } else {
+                    icon.textContent = "☀️"; // Ícone para modo escuro
+                    localStorage.setItem("dark-mode", "false");
+                }
+            });
+        });
+    });
+});
+

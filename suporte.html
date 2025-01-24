@@ -8,22 +8,51 @@
     <link rel="stylesheet" href="style/styles.css">
     <!-- Script do EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style/menu.css">
 </head>
 <body>
+    <!-- Menu fixo -->
+    <nav class="menu-fixo">
+        <div class="container">
+            <h1><a href="/home">FRV TECNO</a></h1>
+            <div class="btn-menu-darkmode">
+                <button id="dark-mode-toggle" class="btn-dark-mode" style="margin-top: 20px;" >
+                <span id="dark-mode-icon">☀️</span>
+            </button>
+        </div>
+            <ul>
+                <li><a href="/home">Início</a></li>
+                <li><a href="/home#services">Serviços</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/suporte">Suporte</a></li>
+            </ul>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="/home">Início</a></li>
+            <li><a href="/home#services">Serviços</a></li>
+            <li><a href="/contato">Contato</a></li>
+            <li><a href="/suporte">Suporte</a></li>
+        </ul>
+        <button id="dark-mode-toggle" class="btn-dark-mode" style="margin-top: 20px;">
+            <span id="dark-mode-icon">☀️</span>
+        </button>
+    </div>
+
     <!-- Header -->
     <header id="header-dark">
         <div class="container">
-            <h1>FRV TECNO</h1>
-            <h2>suporte</h2>
+           
+            <h2>Suporte</h2>
             <p>Transformando projetos em realidade</p>
             <a>Todos os projetos são realizado mediante a contrato</a><br>
-            <a id="voltar-btn" href="/">Home</a>
-            <div class="botão">
-                <button id="dark-mode-toggle" class="btn-dark-mode" style="align-items: left;">
-                    <span id="dark-mode-icon">☀️</span>
-                </button>
-            </div>
-        </div>
     </header>
 
     <!-- Formulário de Contato -->
@@ -45,6 +74,7 @@
         <p>&copy; 2025 FRV TECNO | Todos os direitos reservados.</p>
     </footer>
     <script src="style/toggle-white.js"></script>
+    <script src="style/toggle-menu.js"></script>
     <script src="microservices/suporte-sender.js"></script>
 </body>
 </html>
